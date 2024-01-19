@@ -25,7 +25,9 @@ ul {
   --text: #ffffff;
   --primary: #303030;
   --secondary: #3a3a3a;
+  --tertiary: #6d6d6d;
   --accent: #feba27;
+  --hover: #ffeec8;
   --font: "Poppins", sans-serif;
 }
 
@@ -46,7 +48,6 @@ main {
   max-width: 450px;
   height: 800px;
   border-radius: 25px;
-  padding: 20px;
 }
 
 .btn {
@@ -59,7 +60,9 @@ main {
 }
 
 /* --- HEADER COMPONENT --- */
+
 header {
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +72,7 @@ header {
     font-size: 24px;
 
     &:hover {
-      color: #ffeec8;
+      color: var(--hover);
       transform: scale(1.1);
     }
   }
@@ -77,6 +80,42 @@ header {
   & h1 {
     font-size: 18px;
     font-weight: 500;
+  }
+}
+
+/* --- OVERVIEW COMPONENT --- */
+
+.overview-container {
+  /* styles */
+}
+
+/* --- ITEM COMPONENT --- */
+
+.restaurant-wrapper {
+  background-color: var(--tertiary);
+  height: 100px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+
+  .action-btn {
+    color: var(--accent);
+    font-size: 30px;
+
+    & p {
+      text-transform: capitalize;
+      margin-top: 5px;
+      font-family: var(--font);
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    &:hover {
+      color: var(--hover);
+    }
   }
 }
 
