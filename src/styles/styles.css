@@ -25,14 +25,14 @@ ul {
   --text: #ffffff;
   --primary: #303030;
   --secondary: #3a3a3a;
-  --accent: #dd6e52;
+  --accent: #feba27;
+  --font: "Poppins", sans-serif;
 }
 
 /* --- MAIN CSS --- */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font);
   background-color: var(--background);
   color: var(--text);
   min-height: 100vh;
@@ -46,7 +46,38 @@ main {
   max-width: 450px;
   height: 800px;
   border-radius: 25px;
-  padding: 15px;
+  padding: 20px;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: 250ms ease;
+}
+
+/* --- HEADER COMPONENT --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-btn {
+    color: var(--accent);
+    font-size: 24px;
+
+    &:hover {
+      color: #ffeec8;
+      transform: scale(1.1);
+    }
+  }
+
+  & h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
 /* --- MOBILE RESPONSIVE --- */
