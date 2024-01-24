@@ -82,6 +82,42 @@ header {
   }
 }
 
+/* --- LIST OVERVIEW COMPONENT --- */
+
+/* --- LIST ITEM COMPONENT --- */
+
+.list-item-wrapper {
+  height: 100px;
+  padding: 0 20px;
+  background-color: var(--tertiary);
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  .action-btn {
+    /* border: var(--inspect); */
+    width: 70px;
+    color: var(--accent);
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & p {
+      margin-top: 8px;
+      font-size: 14px;
+      text-transform: capitalize;
+      color: var(--text);
+      transition: 250ms ease;
+    }
+
+    &:hover > p {
+      color: var(--accent);
+    }
+  }
+}
+
 /* --- MOBILE RESPONSIVE --- */
 
 @media screen and (max-width: 450px) {
