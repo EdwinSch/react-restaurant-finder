@@ -8,7 +8,6 @@ const ListItemDrawer = ({ item }) => {
   return (
     <div
       onClick={() => setDrawerIsOpen(!DrawerIsOpen)}
-      // className="listitem-drawer-wrapper"
       className={
         DrawerIsOpen
           ? "listitem-drawer-wrapper slide-left"

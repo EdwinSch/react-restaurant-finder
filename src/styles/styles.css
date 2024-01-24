@@ -27,7 +27,8 @@ ul {
   --secondary: #3a3a3a;
   --tertiary: #6d6d6d;
   --accent: #feba27;
-  --hover: #ffeec8;
+  --hover: #ffedc5;
+  --hoverDark: #553a00;
   --font: "Poppins", sans-serif;
   --inspect: solid red 1px;
 }
@@ -100,7 +101,7 @@ header {
   .action-btn {
     width: 70px;
     color: var(--accent);
-    font-size: 30px;
+    font-size: 28px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,23 +134,25 @@ header {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  transition: 400ms ease;
+  justify-content: space-between;
+  gap: 15px;
+  transition: 300ms ease;
 
   & img {
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
   }
 
   .location-wrapper {
+    margin-left: auto;
     display: grid;
     place-items: center;
 
     .gps-symbol {
-      font-size: 30px;
+      font-size: 28px;
       margin-bottom: 5px;
       color: var(--accent);
     }
@@ -159,6 +162,10 @@ header {
       font-weight: 600;
     }
   }
+
+  &:hover {
+    background-color: var(--hoverDark);
+  }
 }
 
 .slide-left {
@@ -167,7 +174,33 @@ header {
 
 /* --- RESTAURANT INFO COMPONENT --- */
 
-.restaurant-info-wrapper {
+.restaurant-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  & h2 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+
+  .score-wrapper {
+    display: flex;
+  }
+
+  .labels-wrapper {
+    margin-top: 4px;
+    display: flex;
+    gap: 8px;
+
+    .label {
+      padding: 1px 8px;
+      font-size: 11px;
+      border: solid white 1px;
+      border-radius: 10px;
+    }
+  }
 }
 
 /* --- MOBILE RESPONSIVE --- */
