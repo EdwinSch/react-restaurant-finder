@@ -46,6 +46,7 @@ main {
   width: 100vw;
   max-width: 450px;
   margin: 0 auto;
+  /* overflow: hidden; */
 }
 
 .btn {
@@ -119,7 +120,7 @@ header {
   }
 }
 
-/* --- UPPER LIST ITEM COMPONENT --- */
+/* --- DRAWER LIST ITEM COMPONENT --- */
 
 .listitem-drawer-wrapper {
   position: absolute;
@@ -132,7 +133,8 @@ header {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  transition: 400ms ease;
 
   & img {
     width: 65px;
@@ -147,14 +149,25 @@ header {
     place-items: center;
 
     .gps-symbol {
-      font-size: 32px;
+      font-size: 30px;
       margin-bottom: 5px;
+      color: var(--accent);
     }
 
     & p {
+      font-size: 14px;
       font-weight: 600;
     }
   }
+}
+
+.slide-left {
+  left: -200px;
+}
+
+/* --- RESTAURANT INFO COMPONENT --- */
+
+.restaurant-info-wrapper {
 }
 
 /* --- MOBILE RESPONSIVE --- */
