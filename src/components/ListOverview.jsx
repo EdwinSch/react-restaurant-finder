@@ -4,7 +4,7 @@ const ListOverview = ({ list }) => {
   return (
     <section className="list-overview-container">
       {list.map((item) => {
-        return <ListItem key={item.id} list={list} />;
+        return <ListItem key={item.id} item={item} />;
       })}
     </section>
   );

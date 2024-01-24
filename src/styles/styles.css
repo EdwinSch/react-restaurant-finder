@@ -60,7 +60,7 @@ main {
 /* --- HEADER COMPONENT --- */
 
 header {
-  padding: 30px 20px;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,8 +87,9 @@ header {
 /* --- LIST ITEM COMPONENT --- */
 
 .list-item-wrapper {
+  position: relative;
   height: 100px;
-  padding: 0 20px;
+  padding: 0 30px;
   background-color: var(--tertiary);
   margin-bottom: 4px;
   display: flex;
@@ -96,13 +97,13 @@ header {
   gap: 10px;
 
   .action-btn {
-    /* border: var(--inspect); */
     width: 70px;
     color: var(--accent);
     font-size: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 
     & p {
       margin-top: 8px;
@@ -114,6 +115,44 @@ header {
 
     &:hover > p {
       color: var(--accent);
+    }
+  }
+}
+
+/* --- UPPER LIST ITEM COMPONENT --- */
+
+.listitem-drawer-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  background-color: var(--secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+
+  .location-wrapper {
+    display: grid;
+    place-items: center;
+
+    .gps-symbol {
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    & p {
+      font-weight: 600;
     }
   }
 }
