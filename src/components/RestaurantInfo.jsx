@@ -21,7 +21,7 @@ const RestaurantInfo = ({ name, score, labels }) => {
         {renderScore()}
         {stars.map((star, index) => {
           return (
-            <IoStar key={index} style={{ color: "#feba27", fontSize: 14 }} />
+            <IoStar key={index} style={{ color: "#feba27", fontSize: 12 }} />
           );
         })}
       </div>
