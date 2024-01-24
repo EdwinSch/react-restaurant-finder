@@ -8,7 +8,7 @@ const Header = () => {
         <CgMenuLeft />
       </button>
 
-      <h1>Restaurants</h1>
+      <h1>Restaurant finder</h1>
 
       <button className="btn header-btn" type="button">
         <LuSearch />
