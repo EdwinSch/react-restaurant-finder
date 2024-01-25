@@ -76,7 +76,7 @@ header {
 
   .header-btn {
     color: var(--accent);
-    font-size: 24px;
+    font-size: 30px;
 
     &:hover {
       color: var(--hover);
@@ -86,7 +86,7 @@ header {
 
   & h1 {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: capitalize;
   }
 }
@@ -94,7 +94,6 @@ header {
 /* --- SEARCHBAR COMPONENT --- */
 
 .searchbar-container {
-  /* border: var(--inspect); */
   width: 100%;
   display: flex;
   gap: 15px;
@@ -103,7 +102,7 @@ header {
     margin-left: auto;
     width: 100%;
     font-family: var(--font);
-    padding: 5px;
+    padding: 10px 5px;
     background-color: var(--tertiary);
     color: white;
     border: none;
@@ -111,6 +110,7 @@ header {
     animation-name: slide-in;
     animation-duration: 500ms;
     animation-timing-function: ease-out;
+    border-radius: 5px;
 
     &::placeholder {
       color: var(--accent);
@@ -223,6 +223,9 @@ header {
 
   &:hover {
     background-color: var(--hoverDark);
+  }
+  &:active {
+    background-color: var(--secondary);
   }
 }
 

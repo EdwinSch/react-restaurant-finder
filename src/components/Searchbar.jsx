@@ -7,7 +7,7 @@ const Searchbar = ({ isSearchOpen, setIsSearchOpen, setList }) => {
   const [input, setInput] = useState("");
 
   const handleChange = (event) => {
-    setInput(event.target.value);
+    setInput(event.target.value.toLowerCase());
   };
 
   const handleSubmit = (event) => {
@@ -24,6 +24,8 @@ const Searchbar = ({ isSearchOpen, setIsSearchOpen, setList }) => {
     });
     // Set state to filtered return
     setList(filteredList);
+
+    console.log(input);
 
     // Clear Input
     setInput("");
