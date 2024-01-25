@@ -4,21 +4,19 @@ import restaurants from "../data";
 import { useState } from "react";
 
 // Sort by location before render
-// restaurants.sort((a, b) => (a.gps > b.gps ? 1 : b.gps > a.gps ? -1 : 0));
-
 function compareByLocation(a, b) {
   return a.gps - b.gps;
 }
-
 restaurants.sort(compareByLocation);
 
 // Render app
 function App() {
   const [list, setList] = useState(restaurants);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <main>
-      <Header />
+      <Header isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
       <ListOverview list={list} />
     </main>
   );

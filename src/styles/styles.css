@@ -37,7 +37,7 @@ ul {
 
 body {
   font-family: var(--font);
-  background-color: var(--background);
+  background-color: var(--tertiary);
   color: var(--text);
   min-height: 100vh;
 }
@@ -47,7 +47,7 @@ main {
   width: 100vw;
   max-width: 600px;
   margin: 0 auto;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .btn {
@@ -91,7 +91,27 @@ header {
   }
 }
 
+/* --- SEARCHBAR COMPONENT --- */
+
+.searchbar-container {
+  /* border: var(--inspect); */
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 0 20px;
+
+  .searchbar-wrapper {
+    background-color: var(--tertiary);
+    border-radius: 15px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+  }
+}
+
 /* --- LIST OVERVIEW COMPONENT --- */
+
 .list-overview-container {
   padding-top: 90px;
 }
