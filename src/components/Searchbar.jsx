@@ -30,7 +30,7 @@ const Searchbar = ({ isSearchOpen, setIsSearchOpen, setList }) => {
   };
 
   const handleAbort = () => {
-    // IF !input close search only, no list reload.
+    // IF !input close searchbar only, no list reload.
     if (input === "") {
       setIsSearchOpen(!isSearchOpen);
     }
