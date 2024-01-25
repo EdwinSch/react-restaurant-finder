@@ -31,7 +31,7 @@ const restaurants = [
   {
     id: uuidv4(),
     name: "la croix",
-    score: 4,
+    score: 3,
     image: "./restaurant_imgs/hamburger.jpg",
     labels: ["gastropub", "vaporware"],
     gps: 1.1,
