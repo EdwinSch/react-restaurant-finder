@@ -1,10 +1,14 @@
 import ListItemDrawer from "./ListItemDrawer";
 import { IoCall, IoBookmark } from "react-icons/io5";
 
-const ListItem = ({ item }) => {
+const ListItem = ({ item, activeSelected, toggleRestaurant }) => {
   return (
     <article className="list-item-wrapper">
-      <ListItemDrawer item={item} />
+      <ListItemDrawer
+        item={item}
+        activeSelected={activeSelected}
+        toggleRestaurant={toggleRestaurant}
+      />
       {/* Phone button */}
       <a href={`tel:${item.tel}`}>
         <button className="btn action-btn" type="button">

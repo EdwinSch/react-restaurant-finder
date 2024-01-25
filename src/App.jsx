@@ -12,9 +12,16 @@ function sortByLocation(a, b) {
 function App() {
   const [list, setList] = useState(restaurants);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [activeSelected, setActiveSelected] = useState(null);
 
   // Sort by location before (re)render
   list.sort(sortByLocation);
+
+  // Toggle one slider at a time function
+  const toggleRestaurant = (id) => {
+    const newActiveId = id === activeSelected ? null : id;
+    setActiveSelected(newActiveId);
+  };
 
   return (
     <main>
@@ -23,7 +30,11 @@ function App() {
         setIsSearchOpen={setIsSearchOpen}
         setList={setList}
       />
-      <ListOverview list={list} />
+      <ListOverview
+        list={list}
+        activeSelected={activeSelected}
+        toggleRestaurant={toggleRestaurant}
+      />
     </main>
   );
 }

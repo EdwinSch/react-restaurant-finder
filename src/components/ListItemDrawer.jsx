@@ -1,15 +1,15 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import RestaurantInfo from "./RestaurantInfo";
-import { useState } from "react";
 
-const ListItemDrawer = ({ item }) => {
-  const [DrawerIsOpen, setDrawerIsOpen] = useState(false);
+const ListItemDrawer = ({ item, activeSelected, toggleRestaurant }) => {
+  // Slider/selected
+  const isActive = item.id === activeSelected;
 
   return (
     <div
-      onClick={() => setDrawerIsOpen(!DrawerIsOpen)}
+      onClick={() => toggleRestaurant(item.id)}
       className={
-        DrawerIsOpen
+        isActive
           ? "listitem-drawer-wrapper slide-left"
           : "listitem-drawer-wrapper"
       }
