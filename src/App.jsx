@@ -3,11 +3,11 @@ import ListOverview from "./components/ListOverview";
 import restaurants from "../data";
 import { useState } from "react";
 
-// Sort by location before render
-function compareByLocation(a, b) {
+// Sort by location before initial render
+function sortByLocation(a, b) {
   return a.gps - b.gps;
 }
-restaurants.sort(compareByLocation);
+restaurants.sort(sortByLocation);
 
 // Render app
 function App() {
@@ -16,7 +16,11 @@ function App() {
 
   return (
     <main>
-      <Header isSearchOpen={isSearchOpen} setIsSearchOpen={setIsSearchOpen} />
+      <Header
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+        setList={setList}
+      />
       <ListOverview list={list} />
     </main>
   );

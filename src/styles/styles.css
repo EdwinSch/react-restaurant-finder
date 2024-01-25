@@ -95,18 +95,37 @@ header {
 
 .searchbar-container {
   /* border: var(--inspect); */
-  position: absolute;
-  top: 70px;
-  left: 0;
   width: 100%;
-  z-index: 3;
-  padding: 0 20px;
+  display: flex;
+  gap: 15px;
 
-  .searchbar-wrapper {
+  & input[type="text"] {
+    margin-left: auto;
+    width: 100%;
+    font-family: var(--font);
+    padding: 5px;
     background-color: var(--tertiary);
-    border-radius: 15px;
-    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    animation-name: slide-in;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+
+    &::placeholder {
+      color: var(--accent);
+      font-style: italic;
+      font-size: 12px;
+    }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
   }
 }
 

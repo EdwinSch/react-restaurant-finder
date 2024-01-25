@@ -2,25 +2,40 @@ import { CgMenuLeft } from "react-icons/cg";
 import { LuSearch } from "react-icons/lu";
 import Searchbar from "./Searchbar";
 
-const Header = ({ isSearchOpen, setIsSearchOpen }) => {
+const Header = ({ isSearchOpen, setIsSearchOpen, setList }) => {
   return (
     <header>
-      {isSearchOpen && <Searchbar />}
-      <button className="btn header-btn" type="button">
-        <CgMenuLeft />
-      </button>
+      {/* Searchbar */}
+      {isSearchOpen && (
+        <Searchbar
+          isSearchOpen={isSearchOpen}
+          setIsSearchOpen={setIsSearchOpen}
+          setList={setList}
+        />
+      )}
 
-      <h1>Restaurant finder</h1>
+      {/* Bookmarks button */}
+      {isSearchOpen || (
+        <button className="btn header-btn" type="button">
+          <CgMenuLeft />
+        </button>
+      )}
 
-      <button
-        className="btn header-btn"
-        type="button"
-        onClick={() => {
-          setIsSearchOpen(!isSearchOpen);
-        }}
-      >
-        <LuSearch />
-      </button>
+      {/* Heading */}
+      {isSearchOpen || <h1>Restaurant finder</h1>}
+
+      {/* Search button */}
+      {isSearchOpen || (
+        <button
+          className="btn header-btn"
+          type="button"
+          onClick={() => {
+            setIsSearchOpen(!isSearchOpen);
+          }}
+        >
+          <LuSearch />
+        </button>
+      )}
     </header>
   );
 };
