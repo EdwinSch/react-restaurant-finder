@@ -5,10 +5,14 @@ const ListItem = ({ item }) => {
   return (
     <article className="list-item-wrapper">
       <ListItemDrawer item={item} />
-      <button className="btn action-btn" type="button">
-        <IoCall />
-        <p>call</p>
-      </button>
+      {/* Phone button */}
+      <a href={`tel:${item.tel}`}>
+        <button className="btn action-btn" type="button">
+          <IoCall />
+          <p>call</p>
+        </button>
+      </a>
+      {/* Bookmark button */}
       <button className="btn action-btn" type="button">
         <IoBookmark />
         <p>bookmark</p>
