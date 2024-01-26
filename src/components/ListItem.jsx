@@ -1,5 +1,5 @@
 import ListItemDrawer from "./ListItemDrawer";
-import { IoCall, IoBookmark } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
 
 const ListItem = ({ item, activeSelected, toggleRestaurant }) => {
   return (
@@ -16,11 +16,6 @@ const ListItem = ({ item, activeSelected, toggleRestaurant }) => {
           <p>call</p>
         </button>
       </a>
-      {/* Bookmark button */}
-      <button className="btn action-btn" type="button">
-        <IoBookmark />
-        <p>bookmark</p>
-      </button>
     </article>
   );
 };

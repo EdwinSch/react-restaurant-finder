@@ -7,15 +7,23 @@ import { useState } from "react";
 function sortByLocation(a, b) {
   return a.gps - b.gps;
 }
+// Sort by rating functions
+function sortByRating(a, b) {
+  return b.score - a.score;
+}
 
 // Render app
 function App() {
   const [list, setList] = useState(restaurants);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [activeSelected, setActiveSelected] = useState(null);
+  // DEFAULT: Sort by location before initial render
+  const [sortingType, setSortingType] = useState(true);
 
-  // Sort by location before (re)render
-  list.sort(sortByLocation);
+  // Sorting type switch
+  {
+    sortingType ? list.sort(sortByLocation) : list.sort(sortByRating);
+  }
 
   // Toggle one slider at a time function
   const toggleRestaurant = (id) => {
@@ -29,7 +37,10 @@ function App() {
         isSearchOpen={isSearchOpen}
         setIsSearchOpen={setIsSearchOpen}
         setList={setList}
+        sortingType={sortingType}
+        setSortingType={setSortingType}
       />
+
       <ListOverview
         list={list}
         activeSelected={activeSelected}

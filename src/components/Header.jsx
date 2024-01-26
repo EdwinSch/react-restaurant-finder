@@ -1,8 +1,15 @@
-import { CgMenuLeft } from "react-icons/cg";
 import { LuSearch } from "react-icons/lu";
+import { LiaSortSolid } from "react-icons/lia";
+
 import Searchbar from "./Searchbar";
 
-const Header = ({ isSearchOpen, setIsSearchOpen, setList }) => {
+const Header = ({
+  isSearchOpen,
+  setIsSearchOpen,
+  setList,
+  sortingType,
+  setSortingType,
+}) => {
   return (
     <header>
       {/* Searchbar */}
@@ -16,8 +23,12 @@ const Header = ({ isSearchOpen, setIsSearchOpen, setList }) => {
 
       {/* Bookmarks button */}
       {isSearchOpen || (
-        <button className="btn header-btn" type="button">
-          <CgMenuLeft />
+        <button
+          className="btn header-btn"
+          type="button"
+          onClick={() => setSortingType(!sortingType)}
+        >
+          <LiaSortSolid />
         </button>
       )}
 
