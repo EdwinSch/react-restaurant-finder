@@ -21,12 +21,13 @@ const Header = ({
         />
       )}
 
-      {/* Bookmarks button */}
+      {/* Sort button */}
       {isSearchOpen || (
         <button
           className="btn header-btn"
           type="button"
           onClick={() => setSortingType(!sortingType)}
+          aria-label="sort mode"
         >
           <LiaSortSolid />
         </button>
@@ -43,6 +44,7 @@ const Header = ({
           onClick={() => {
             setIsSearchOpen(!isSearchOpen);
           }}
+          aria-label="search"
         >
           <LuSearch />
         </button>
