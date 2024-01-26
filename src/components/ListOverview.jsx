@@ -1,6 +1,6 @@
 import ListItem from "./ListItem";
 
-const ListOverview = ({ list, activeSelected, toggleRestaurant }) => {
+const ListOverview = ({ list, activeDrawer, toggleDrawer }) => {
   return (
     <section className="list-overview-container">
       {list.map((item) => {
@@ -8,8 +8,8 @@ const ListOverview = ({ list, activeSelected, toggleRestaurant }) => {
           <ListItem
             key={item.id}
             item={item}
-            activeSelected={activeSelected}
-            toggleRestaurant={toggleRestaurant}
+            activeDrawer={activeDrawer}
+            toggleDrawer={toggleDrawer}
           />
         );
       })}

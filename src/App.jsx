@@ -16,7 +16,7 @@ function sortByRating(a, b) {
 function App() {
   const [list, setList] = useState(restaurants);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [activeSelected, setActiveSelected] = useState(null);
+  const [activeDrawer, setActiveDrawer] = useState(null);
   // DEFAULT: Sort by location before initial render
   const [sortingType, setSortingType] = useState(true);
 
@@ -26,9 +26,9 @@ function App() {
   }
 
   // Toggle one slider at a time function
-  const toggleRestaurant = (id) => {
-    const newActiveId = id === activeSelected ? null : id;
-    setActiveSelected(newActiveId);
+  const toggleDrawer = (id) => {
+    const newActiveId = id === activeDrawer ? null : id;
+    setActiveDrawer(newActiveId);
   };
 
   return (
@@ -43,8 +43,8 @@ function App() {
 
       <ListOverview
         list={list}
-        activeSelected={activeSelected}
-        toggleRestaurant={toggleRestaurant}
+        activeDrawer={activeDrawer}
+        toggleDrawer={toggleDrawer}
       />
     </main>
   );
