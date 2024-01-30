@@ -25,8 +25,6 @@ const Searchbar = ({ isSearchOpen, setIsSearchOpen, setList }) => {
     // Set state to filtered return
     setList(filteredList);
 
-    console.log(input);
-
     // Clear Input
     setInput("");
   };

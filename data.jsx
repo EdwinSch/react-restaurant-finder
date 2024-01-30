@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const restaurants = [
   {
     id: uuidv4(),
-    name: "Activated charcoal",
+    name: "activated charcoal",
     score: 4,
     image: "./restaurant_imgs/pasta.jpg",
     labels: ["artisan", "organic", "chic"],
@@ -12,7 +12,7 @@ const restaurants = [
   },
   {
     id: uuidv4(),
-    name: "Gochujang hexagon",
+    name: "gochujang hexagon",
     score: 2,
     image: "./restaurant_imgs/pancakes.jpg",
     labels: ["artisan", "schlitz"],
@@ -21,7 +21,7 @@ const restaurants = [
   },
   {
     id: uuidv4(),
-    name: "Snackwave",
+    name: "snackwave",
     score: 5,
     image: "./restaurant_imgs/cake.jpg",
     labels: ["artisan", "organic", "cray"],
